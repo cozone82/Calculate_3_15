@@ -4,33 +4,36 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
+<div class="d-flex justify-content-center mt-5">
    <form asp-action="Index" method="post">
-    <div>
-        <label asp-for="Num1">Number 1:</label>
-        <input asp-for="Num1" />
-    </div>
-    <div>
-        <label asp-for="Num2">Number 2:</label>
-        <input asp-for="Num2" />
-    </div>
-    <div>
-        <label>Sum of Numbers:</label>
-        <input value="@Model.Sum" />
-    </div>
-    <div>
-        <label>Product of Numbers:</label>
-        <input value="@Model.Product" />
-    </div>
-    <div>
-        <label>Difference of Numbers:</label>
-        <input value="@Model.Difference" />
-    </div>
-    <div>
-        <label>Quotient of Numbers:</label>
-        <input value="@Model.Quotient" />
-    </div>
-    <button type="submit">Calculate</button>
-    <a asp-action="Index">Clear</a>
-</form> 
+        <div>
+            <label asp-for="Num1" class="control-label fw-bold">Enter Number 1:</label>
+            <input asp-for="Num1" class="form-control" />
+        </div>
+        <div>
+            <label asp-for="Num2" class="control-label fw-bold ">Enter Number 2:</label>
+            <input asp-for="Num2" class="form-control" />
+        </div>
+        <hr />
+        <div>
+            <label class="control-label fw-bold ">Sum of Numbers: </label>
+            <input value="@Model.Sum" class="form-control" />
+        </div>
+        <div>
+            <label class="control-label fw-bold">Product of Numbers:</label>
+            <input value="@Model.Product" class="form-control" />
+        </div>
+        <div>
+            <label class="control-label fw-bold">Difference of Numbers:</label>
+            <input value="@Model.Difference" class="form-control" />
+        </div>
+        <div>
+            <label class="control-label fw-bold ">Quotient of Numbers:</label>
+            <input value="@Model.Quotient" class="form-control" />
+        </div>
+        <div class="mt-2">
+            <button type="submit" class="btn btn-primary">Calculate</button>
+            <a asp-action="Index" class="btn btn-outline-danger">Clear</a>
+        </div>
+    </form> 
 </div>

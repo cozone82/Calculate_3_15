@@ -12,6 +12,7 @@
         public string SumOfNumbers()
         {
             string sum;
+
             sum = Convert.ToString(Num1 + Num2);
             return sum;
         }
