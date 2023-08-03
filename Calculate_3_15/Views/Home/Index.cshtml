@@ -1,0 +1,36 @@
+﻿@model Calculate
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+   <form asp-action="Index" method="post">
+    <div>
+        <label asp-for="Num1">Number 1:</label>
+        <input asp-for="Num1" />
+    </div>
+    <div>
+        <label asp-for="Num2">Number 2:</label>
+        <input asp-for="Num2" />
+    </div>
+    <div>
+        <label>Sum of Numbers:</label>
+        <input value="@Model.Sum" />
+    </div>
+    <div>
+        <label>Product of Numbers:</label>
+        <input value="@Model.Product" />
+    </div>
+    <div>
+        <label>Difference of Numbers:</label>
+        <input value="@Model.Difference" />
+    </div>
+    <div>
+        <label>Quotient of Numbers:</label>
+        <input value="@Model.Quotient" />
+    </div>
+    <button type="submit">Calculate</button>
+    <a asp-action="Index">Clear</a>
+</form> 
+</div>
