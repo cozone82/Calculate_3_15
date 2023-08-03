@@ -35,7 +35,7 @@ namespace Calculate_3_15.Controllers
                 model.Quotient = Convert.ToString("Quotient is " + (model.QuotientOfNumbers()));
                
             }
-            catch (Exception) 
+            catch (Exception ) 
             {
                 model.Sum = ("VOID");
                 model.Product = ("VOID");
